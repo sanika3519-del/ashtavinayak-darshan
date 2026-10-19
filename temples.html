@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title data-i18n="title.temples">The Eight Temples – Ashtavinayak Darshan</title>
+<meta name="description" content="Ashtavinayak Darshan: a trilingual (English, Marathi, Hindi) guide to the eight Ganesha temples of Maharashtra.">
+<meta name="theme-color" content="#c85a0a">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600;700&family=Noto+Sans+Devanagari:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="temples" id="top">
+<header id="site-header"></header>
+<main id="main" class="section container">
+  <h1 data-i18n="templesPageTitle">The Eight Ganpati Temples of Ashtavinayak</h1>
+  <p class="lead" data-i18n="templesPageLead">Search by temple name, village or deity in English, मराठी or हिंदी.</p>
+  <div class="toolbar" role="search">
+      <div class="field">
+        <label data-i18n="searchTemples" for="templeSearch">Search temples</label>
+        <input type="search" id="templeSearch" autocomplete="off" data-i18n-attr="placeholder:searchTemplesPlaceholder" placeholder="e.g. Morgaon, मोरगाव, मयूरेश्वर">
+      </div>
+      <button type="button" class="btn btn-outline btn-small" id="clearSearch" data-i18n="clearSearch">Clear search</button>
+      <div class="field">
+        <label data-i18n="filterDistrict" for="districtFilter">District</label>
+        <select id="districtFilter">
+          <option value="all" data-i18n="all">All</option>
+          <option value="pune" data-i18n="districtPune">Pune</option>
+          <option value="raigad" data-i18n="districtRaigad">Raigad</option>
+          <option value="ahilyanagar" data-i18n="districtAhilyanagar">Ahilyanagar</option>
+        </select>
+      </div>
+      <label class="check"><input type="checkbox" id="favOnly"><span data-i18n="favouritesOnly">Favourites only</span></label>
+  </div>
+  <p class="status" id="templeCount" role="status" aria-live="polite"></p>
+  <div class="grid" id="templeGrid"></div>
+  <p class="empty" id="templeEmpty" hidden data-i18n="noResults">No results found. Try a different spelling or another language.</p>
+</main>
+<footer id="site-footer"></footer>
+<script src="js/temples.js"></script>
+<script src="js/translations.js"></script>
+<script src="js/main.js"></script>
+<script src="js/images.js"></script>
+<script src="js/pages.js"></script>
+</body>
+</html>

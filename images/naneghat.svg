@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" preserveAspectRatio="xMidYMid slice">
+<defs><linearGradient id="skynaneghat" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#d4e6f2"/><stop offset="1" stop-color="#8fb4c9"/></linearGradient></defs>
+<rect width="800" height="520" fill="url(#skynaneghat)"/>
+<circle cx="620" cy="140" r="62" fill="#fff3d0" opacity=".35"/>
+<circle cx="620" cy="140" r="44" fill="#fff3d0" opacity=".9"/>
+<path d="M0 440 L0 200 L140 280 L250 170 L360 330 L440 330 L560 150 L690 270 L800 190 L800 440Z" fill="#55716b"/><path d="M360 330 L400 440 L440 330Z" fill="#7fa592" opacity=".6"/><path d="M0 440 L0 330 L180 380 L330 350 L400 440Z" fill="#7fa592" opacity=".5"/><path d="M470 360 q50 -30 80 20 q40 -10 60 40" stroke="#ffffff" stroke-opacity=".5" stroke-width="5" fill="none"/><rect x="0" y="430" width="800" height="90" fill="#2f4a3a"/>
+</svg>

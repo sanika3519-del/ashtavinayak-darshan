@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title data-i18n="title.gallery">Photo Gallery – Ashtavinayak Darshan</title>
+<meta name="description" content="Ashtavinayak Darshan: a trilingual (English, Marathi, Hindi) guide to the eight Ganesha temples of Maharashtra.">
+<meta name="theme-color" content="#c85a0a">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600;700&family=Noto+Sans+Devanagari:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="gallery" id="top">
+<header id="site-header"></header>
+<main id="main" class="section container">
+  <h1 data-i18n="galleryPageTitle">Photo Gallery</h1>
+  <p class="lead" data-i18n="galleryLead">Illustrations of the temples and nearby places. Select an image to enlarge it.</p>
+  <div class="toolbar" role="search">
+      <div class="field">
+        <label data-i18n="searchGallery" for="gallerySearch">Search gallery</label>
+        <input type="search" id="gallerySearch" autocomplete="off" data-i18n-attr="placeholder:searchGalleryPlaceholder" placeholder="e.g. Pali, पाली, किल्ला">
+      </div>
+      <button type="button" class="btn btn-outline btn-small" id="clearSearch" data-i18n="clearSearch">Clear search</button>
+  </div>
+  <div class="chips" id="catChips" role="group" data-i18n-attr="aria-label:category" aria-label="Category"></div>
+  <p class="status" id="galleryCount" role="status" aria-live="polite"></p>
+  <div class="gallery-grid" id="galleryGrid"></div>
+  <p class="empty" id="galleryEmpty" hidden data-i18n="noResults">No results found. Try a different spelling or another language.</p>
+  <p class="card-meta" data-i18n="creditsImages">Images: the pictures on this website are simple illustrations drawn for this project. They are not photographs of the actual temples. Replace them with your own photographs and credit the photographer.</p>
+
+  <dialog id="lightbox" class="lightbox" aria-label="Image viewer">
+    <div class="lb-inner">
+      <img id="lbImg" src="" alt="">
+      <div class="lb-bar">
+        <div class="lb-caption" id="lbCaption"></div>
+        <span class="muted" id="lbCount"></span>
+        <div style="display:flex;gap:.4rem;flex-wrap:wrap">
+          <button type="button" class="icon-btn" id="lbPrev" aria-label="Previous image">‹</button>
+          <button type="button" class="icon-btn" id="lbNext" aria-label="Next image">›</button>
+          <a class="btn btn-outline btn-small" id="lbLink" href="#">View details</a>
+          <button type="button" class="icon-btn" id="lbClose" aria-label="Close image viewer">✕</button>
+        </div>
+      </div>
+    </div>
+  </dialog>
+</main>
+<footer id="site-footer"></footer>
+<script src="js/temples.js"></script>
+<script src="js/translations.js"></script>
+<script src="js/main.js"></script>
+<script src="js/images.js"></script>
+<script src="js/pages.js"></script>
+</body>
+</html>

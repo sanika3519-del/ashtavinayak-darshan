@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title data-i18n="title.planner">Trip Planner – Ashtavinayak Darshan</title>
+<meta name="description" content="Ashtavinayak Darshan: a trilingual (English, Marathi, Hindi) guide to the eight Ganesha temples of Maharashtra.">
+<meta name="theme-color" content="#c85a0a">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600;700&family=Noto+Sans+Devanagari:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="planner" id="top">
+<header id="site-header"></header>
+<main id="main" class="section container">
+  <h1 data-i18n="plannerPageTitle">Interactive Trip Planner</h1>
+  <p class="lead" data-i18n="plannerLead">Choose your temples and preferences. Your selections are kept when you change language.</p>
+
+  <form id="plannerForm" novalidate>
+    <fieldset>
+      <legend data-i18n="plannerFormTitle">Your trip</legend>
+      <div class="form-grid">
+        <div class="field"><label data-i18n="startingCity" for="pStart">Starting city</label><select id="pStart"></select></div>
+        <div class="field"><label data-i18n="daysLabel" for="pDays">Number of days</label><select id="pDays"></select></div>
+        <div class="field"><label data-i18n="travelBy" for="pMode">Travel by</label><select id="pMode"></select></div>
+        <div class="field"><label data-i18n="paceLabel" for="pPace">Travel pace</label><select id="pPace"></select></div>
+        <div class="field"><label data-i18n="travellersLabel" for="pTravellers">Number of travellers</label><input type="number" id="pTravellers" min="1" max="20" value="2"></div>
+        <div class="field"><label data-i18n="startTimeLabel" for="pStartTime">Daily start time</label><input type="time" id="pStartTime" value="07:00"></div>
+      </div>
+      <label class="check"><input type="checkbox" id="pNearby" checked><span data-i18n="includeNearby">Add nearby attractions to my plan</span></label>
+    </fieldset>
+
+    <fieldset>
+      <legend data-i18n="selectTemples">Select temples</legend>
+      <div class="chips">
+        <button type="button" class="chip" id="pAll" data-i18n="selectAll">Select all</button>
+        <button type="button" class="chip" id="pClear" data-i18n="clearAll">Clear all</button>
+        <span class="muted" id="pCount" role="status" aria-live="polite"></span>
+      </div>
+      <div class="temple-pick" id="templePick"></div>
+    </fieldset>
+
+    <div id="plannerError" class="msg msg-error" role="alert" hidden></div>
+    <p class="status" id="plannerStatus" role="status" aria-live="polite"></p>
+    <div style="display:flex;gap:.6rem;flex-wrap:wrap">
+      <button type="submit" class="btn" id="pGenerate" data-i18n="generatePlan">Create my itinerary</button>
+      <button type="button" class="btn btn-outline" id="pReset" data-i18n="resetPlan">Reset</button>
+    </div>
+  </form>
+
+  <section id="itinerary" class="section" hidden></section>
+
+  <section class="section">
+    <div class="panel">
+      <h2 data-i18n="remindersTitle">Travel reminders</h2>
+      <ul>
+      <li data-i18n="reminder1">Carry a valid photo ID and some cash in small notes.</li>
+      <li data-i18n="reminder2">Check temple opening hours and darshan rules before you leave.</li>
+      <li data-i18n="reminder3">Keep your phone charged and download offline maps for hill areas.</li>
+      <li data-i18n="reminder4">Wear comfortable footwear that is easy to remove.</li>
+      <li data-i18n="reminder5">Book accommodation early for Chaturthi days and festival weeks.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section no-print">
+    <div class="panel">
+      <h2 data-i18n="checklistTitle">Travel checklist</h2>
+      <div id="checklist" class="temple-pick"></div>
+    </div>
+  </section>
+  <p class="card-meta" data-i18n="mapNote">Maps open in Google Maps. Map labels follow your own Google Maps language settings and cannot be translated by this website.</p>
+</main>
+<footer id="site-footer"></footer>
+<script src="js/temples.js"></script>
+<script src="js/translations.js"></script>
+<script src="js/main.js"></script>
+<script src="js/images.js"></script>
+<script src="js/pages.js"></script>
+<script src="js/routes.js"></script>
+<script src="js/trip-planner.js"></script>
+</body>
+</html>
